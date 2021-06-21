@@ -43,15 +43,13 @@ drop table if exists rented_books;
 create table rented_books (
 book_id int not null,
 user_id int not null,
-issuing_librarian_id int not null,
 rented_date date not null,
 due_date date not null,
 returned_date date,
 fee float,
 
 CONSTRAINT `book_id_f` FOREIGN KEY (`book_id`) REFERENCES `book` (`book_id`),
-CONSTRAINT `user_id_f` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
-CONSTRAINT `libr_id_f` FOREIGN KEY (`issuing_librarian_id`) REFERENCES `librarian` (`libr_id`)
+CONSTRAINT `user_id_f` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
 );
 
 

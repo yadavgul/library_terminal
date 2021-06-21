@@ -4,7 +4,7 @@ from mysql.connector import MySQLConnection, Error
 
 
 
-def read_db_config(filename='fileconfig.ini', section='mysql'):
+def read_db_config(filename=r'C:\Users\gul\PycharmProjects\libraryProject\venv\db\fileconfig.ini', section='mysql'):
 
     parser = ConfigParser()
     parser.read(filename)
